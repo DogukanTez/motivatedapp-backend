@@ -10,11 +10,11 @@ const (
 )
 
 type Goal struct {
-	ID        int        `json:"id"`
-	UserID    int        `json:"user_id"`
+	ID        int64      `json:"id"`
+	UserID    int64      `json:"user_id"`
 	Title     string     `json:"title"`
 	Type      GoalType   `json:"type"`
-	StartDate string     `json:"start_date"` // "YYYY-MM-DD"
+	StartDate time.Time  `json:"start_date"`
 	IsActive  bool       `json:"is_active"`
 	CreatedAt time.Time  `json:"created_at"`
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`

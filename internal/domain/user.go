@@ -3,7 +3,7 @@ package domain
 import "time"
 
 type User struct {
-	ID           int         `json:"id"`
+	ID           int64       `json:"id"`
 	Email        *string     `json:"email,omitempty"`
 	Password     *string     `json:"password,omitempty"`
 	AuthProvider string      `json:"auth_provider"`
@@ -13,10 +13,10 @@ type User struct {
 }
 
 type UserDetail struct {
-	UserID           int        `json:"user_id"`
+	UserID           int64      `json:"user_id"`
 	DeviceID         *string    `json:"device_id,omitempty"`
 	Platform         *string    `json:"platform,omitempty"`
 	Locale           *string    `json:"locale,omitempty"`
-	NotificationTime *string    `json:"notification_time,omitempty"` // HH:MM time format
+	NotificationTime *time.Time `json:"notification_time,omitempty"` // HH:MM time format
 	LastSeenAt       *time.Time `json:"last_seen_at,omitempty"`      //timestamptz
 }

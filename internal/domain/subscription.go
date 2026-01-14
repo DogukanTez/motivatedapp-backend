@@ -18,8 +18,8 @@ const (
 )
 
 type Subscription struct {
-	ID                    int                `json:"id"`
-	UserID                int                `json:"user_id"`
+	ID                    int64              `json:"id"`
+	UserID                int64              `json:"user_id"`
 	Platform              Platform           `json:"platform"`
 	ProductID             string             `json:"product_id"`
 	IsLifetime            bool               `json:"is_lifetime"`
